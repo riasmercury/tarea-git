@@ -6,21 +6,71 @@
     <title>Lugares Turísticos Favoritos</title>
 
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
+        margin: 0;
         font-family: Arial, sans-serif;
         background-color: #eeeeee;
-        margin: 0;
+        color: #222;
       }
 
       header {
         background-color: #2c3e50;
         color: white;
         text-align: center;
-        padding: 25px;
+        padding: 25px 20px;
+      }
+
+      header h1 {
+        margin: 0 0 10px;
+      }
+
+      header p {
+        margin: 0;
+      }
+
+      .lugares {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 30px 20px;
       }
 
       .lugar {
-        padding: 20px;
+        width: 300px;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .lugar img {
+        display: block;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .lugar-content {
+        padding: 15px;
+      }
+
+      .lugar h2 {
+        margin: 0 0 10px;
+        font-size: 1.4rem;
+      }
+
+      .lugar p {
+        margin: 0 0 10px;
+        line-height: 1.5;
+      }
+
+      .lugar p:last-child {
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -31,161 +81,160 @@
       <p>10 lugares turísticos de Colombia</p>
     </header>
 
-    <div class="lugar">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI_aFu4lBgpWxCQj_Z9ZrjMNFdD8FaRjv3Ez9JWWCn-g&s=10"
-        alt="Cartagena de Indias"
-      />
-      <h2>Cartagena de Indias</h2>
+    <main class="lugares">
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI_aFu4lBgpWxCQj_Z9ZrjMNFdD8FaRjv3Ez9JWWCn-g&s=10"
+          alt="Cartagena de Indias"
+        />
+        <div class="lugar-content">
+          <h2>Cartagena de Indias</h2>
+          <p>
+            Cartagena es una ciudad conocida por sus calles antiguas, sus
+            murallas y sus construcciones coloniales.
+          </p>
+          <p><strong>Ubicación:</strong> Bolívar, Colombia.</p>
+        </div>
+      </article>
 
-      <p>
-        Cartagena es una ciudad conocida por sus calles antiguas, sus murallas y
-        sus construcciones coloniales.
-      </p>
-
-      <p><b>Ubicación:</b> Bolívar, Colombia.</p>
-      .lugar { background-color: white; width: 300px; padding: 15px;
-      border-radius: 8px; margin-bottom: 20px; }
-      <div class="lugar">
+      <article class="lugar">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjvl2TktCG96Q9hCJPgD9twNNQ7CbhpQOuO0hhm9NAg&s=10"
           alt="Parque Tayrona"
         />
-
-        <h2>Parque Nacional Tayrona</h2>
-
-        <p>
-          Es un parque natural conocido por sus playas, montañas y zonas de
-          selva.
-        </p>
-
-        <p><b>Ubicación:</b> Magdalena, Colombia.</p>
-        <div class="lugar">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMQ-es4VebBOy8m-8Rlw5iyDzWSnk8QlXJZNoXIFTyQ&s=10"
-            alt="Caño Cristales"
-          />
-
-          <h2>Caño Cristales</h2>
-
+        <div class="lugar-content">
+          <h2>Parque Nacional Tayrona</h2>
           <p>
-            Es conocido como el río de los cinco colores por los colores que se
-            pueden observar en sus aguas.
+            Es un parque natural conocido por sus playas, montañas y zonas de
+            selva.
           </p>
-
-          <p><b>Ubicación:</b> La Macarena, Meta.</p>
-          <div class="lugar">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtri1LIV9XCL2JiC1U-3F7WFVwbLDHjpd9la9CUOuIuw&s=10"
-              alt="Comuna 13"
-            />
-
-            <h2>Comuna 13</h2>
-
-            <p>
-              Es un lugar de Medellín conocido por sus grafitis, arte urbano,
-              música y transformación social.
-            </p>
-
-            <p><b>Ubicación:</b> Medellín, Antioquia.</p>
-            <div class="lugar">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc3XB5mx3z6IsxrixlgtqvQJ0oe8VvbAQjwslOxZxEgw&s=10"
-                alt="Catedral de Sal"
-              />
-
-              <h2>Catedral de Sal de Zipaquirá</h2>
-
-              <p>
-                Es una iglesia construida dentro de una antigua mina de sal y es
-                uno de los lugares turísticos más conocidos de Colombia.
-              </p>
-
-              <p><b>Ubicación:</b> Zipaquirá, Cundinamarca.</p>
-              <div class="lugar">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiXqvxLilk7KaCzoFASM6TnZ2aYXkrMEVGe9fumXSCg&s=10"
-                  alt="Valle de Cocora"
-                />
-
-                <h2>Valle de Cocora</h2>
-
-                <p>
-                  Es un paisaje natural famoso por sus palmas de cera y sus
-                  montañas verdes.
-                </p>
-
-                <p><b>Ubicación:</b> Salento, Quindío.</p>
-                <div class="lugar">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlewrU4PtDOqo4oe3r1ma4i381TIwhvvR9dCb4BQ4B4w&s=10"
-                    alt="San Andrés"
-                  />
-
-                  <h2>San Andrés</h2>
-
-                  <p>
-                    Es una isla conocida por sus playas, su mar de varios
-                    colores y sus paisajes del Caribe.
-                  </p>
-
-                  <p>
-                    <b>Ubicación:</b> Archipiélago de San Andrés, Providencia y
-                    Santa Catalina.
-                  </p>
-                  <div class="lugar">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdbdgJejQL3ioZxs_r4hxS1RNK3NKp662VnRB1H1iljQ&s=10"
-                      alt="Guatapé"
-                    />
-
-                    <h2>Guatapé y El Peñol</h2>
-
-                    <p>
-                      Guatapé es famoso por sus casas coloridas y por la Piedra
-                      del Peñol.
-                    </p>
-
-                    <p><b>Ubicación:</b> Antioquia, Colombia.</p>
-                    <div class="lugar">
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDW3KPMSNFXV9Wi3QMjQEkeE7OMG-sfhtxJOyi6kw8Q&s=10"
-                        alt="San Agustín"
-                      />
-
-                      <h2>San Agustín</h2>
-
-                      <p>
-                        Es un lugar importante por sus esculturas y monumentos
-                        de culturas antiguas.
-                      </p>
-
-                      <p><b>Ubicación:</b> Huila, Colombia.</p>
-                      <div class="lugar">
-                        <img
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDOl-6x-rClzXNn8PZuwFTXjiSfxPPQHfCfadKgRiW2Q&s=10"
-                          alt="Amazonas"
-                        />
-
-                        <h2>Amazonas</h2>
-
-                        <p>
-                          Es una región con mucha naturaleza, animales, ríos y
-                          selva. También tiene diferentes comunidades indígenas.
-                        </p>
-
-                        <p>
-                          <b>Ubicación:</b> Departamento del Amazonas, Colombia.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p><strong>Ubicación:</strong> Magdalena, Colombia.</p>
         </div>
-      </div>
-    </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMQ-es4VebBOy8m-8Rlw5iyDzWSnk8QlXJZNoXIFTyQ&s=10"
+          alt="Caño Cristales"
+        />
+        <div class="lugar-content">
+          <h2>Caño Cristales</h2>
+          <p>
+            Es conocido como el río de los cinco colores por los tonos que se
+            observan en sus aguas.
+          </p>
+          <p><strong>Ubicación:</strong> La Macarena, Meta.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtri1LIV9XCL2JiC1U-3F7WFVwbLDHjpd9la9CUOuIuw&s=10"
+          alt="Comuna 13"
+        />
+        <div class="lugar-content">
+          <h2>Comuna 13</h2>
+          <p>
+            Es un lugar de Medellín conocido por sus grafitis, arte urbano y
+            transformación social.
+          </p>
+          <p><strong>Ubicación:</strong> Medellín, Antioquia.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc3XB5mx3z6IsxrixlgtqvQJ0oe8VvbAQjwslOxZxEgw&s=10"
+          alt="Catedral de Sal"
+        />
+        <div class="lugar-content">
+          <h2>Catedral de Sal de Zipaquirá</h2>
+          <p>
+            Es una iglesia construida dentro de una antigua mina de sal y es uno
+            de los lugares turísticos más conocidos de Colombia.
+          </p>
+          <p><strong>Ubicación:</strong> Zipaquirá, Cundinamarca.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiXqvxLilk7KaCzoFASM6TnZ2aYXkrMEVGe9fumXSCg&s=10"
+          alt="Valle de Cocora"
+        />
+        <div class="lugar-content">
+          <h2>Valle de Cocora</h2>
+          <p>
+            Es un paisaje natural famoso por sus palmas de cera y sus montañas
+            verdes.
+          </p>
+          <p><strong>Ubicación:</strong> Salento, Quindío.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlewrU4PtDOqo4oe3r1ma4i381TIwhvvR9dCb4BQ4B4w&s=10"
+          alt="San Andrés"
+        />
+        <div class="lugar-content">
+          <h2>San Andrés</h2>
+          <p>
+            Es una isla conocida por sus playas, su mar de varios colores y sus
+            paisajes del Caribe.
+          </p>
+          <p>
+            <strong>Ubicación:</strong> Archipiélago de San Andrés, Providencia
+            y Santa Catalina.
+          </p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdbdgJejQL3ioZxs_r4hxS1RNK3NKp662VnRB1H1iljQ&s=10"
+          alt="Guatapé"
+        />
+        <div class="lugar-content">
+          <h2>Guatapé y El Peñol</h2>
+          <p>
+            Guatapé es famoso por sus casas coloridas y por la Piedra del Peñol.
+          </p>
+          <p><strong>Ubicación:</strong> Antioquia, Colombia.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxDW3KPMSNFXV9Wi3QMjQEkeE7OMG-sfhtxJOyi6kw8Q&s=10"
+          alt="San Agustín"
+        />
+        <div class="lugar-content">
+          <h2>San Agustín</h2>
+          <p>
+            Es un lugar importante por sus esculturas y monumentos de culturas
+            antiguas.
+          </p>
+          <p><strong>Ubicación:</strong> Huila, Colombia.</p>
+        </div>
+      </article>
+
+      <article class="lugar">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDOl-6x-rClzXNn8PZuwFTXjiSfxPPQHfCfadKgRiW2Q&s=10"
+          alt="Amazonas"
+        />
+        <div class="lugar-content">
+          <h2>Amazonas</h2>
+          <p>
+            Es una región con mucha naturaleza, animales, ríos y selva. También
+            tiene diferentes comunidades indígenas.
+          </p>
+          <p>
+            <strong>Ubicación:</strong> Departamento del Amazonas, Colombia.
+          </p>
+        </div>
+      </article>
+    </main>
   </body>
 </html>
